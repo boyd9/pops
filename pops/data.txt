@@ -1,0 +1,7 @@
+[{"name": "Mondy"},
+	{"name" : "Tuesday"},
+	{"name" : "Wednesday"},
+	{"name" : "Thrusdsay"},
+	{"name" : "Friday"},
+	{"name" : "Saturday"},
+	{"name" : "Sunday"}]

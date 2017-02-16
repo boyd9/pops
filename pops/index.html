@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Poppys Website</title>
+	
+	<script type="text/javascript" src="./js/jquery-3.1.1.js"></script>
+
+	<script type="text/javascript" src="./js/jquery-ui.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.css">
+	
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<script type="text/javascript">
+		
+		$("document").ready(function(){
+
+			
+
+			$("#draggable").draggable();
+
+			$("#angrybird").draggable();
+
+			$("#thatpoppy").draggable();
+
+			$.ajax({
+				url: "data.txt",
+				success: function(data){
+					console.log(data);
+
+					var counter = 0;
+					var args = $.parseJSON(data);
+
+					$.each(args, function(){
+
+						var tmp = this['name'];
+						counter++;
+						//$("#acc-section-" + counter).html(tmp);
+						$('#accordion').append('<h3>' + tmp + '</h3><div><p>This is sample text - insert awesome stuff here</p></div>');
+
+					});
+
+					$("#accordion").accordion();
+					
+				},
+				error: function(){
+					console.log("Something went wrong :(")
+				}
+			})	
+
+		});
+
+	</script>
+
+</head>
+<body>
+	<div id='page-wrap'>
+		
+		<!--Header content -->
+		<div id='header'>
+			
+		</div>
+
+
+		<!--Main content section -->
+		<div id='content'>
+			<div id='accordion'></div>
+
+			<div id='draggable'></div>
+			<div id='angrybird'></div>
+			<div id='thatpoppy'></div>
+
+		</div>
+
+
+		<!--Footer content-->
+		<div id='footer'>
+			
+		</div>
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+ul {
+	list-style: none inside;
+}
+
+p {
+	font-size: 1.2em;
+	margin-bottom: 1.3em;
+}
+
+a { outline: none; }
+a img {border: none;}
+
+h1 { font-size: 2.0em; }
+h2 { font-size: 1.5em; }
+
+.floatleft {float: left;}
+.floatright {float: right;}
+.clear {clear: both;}
+
+body{
+	font: 62.5% Georgia, serif;
+	background: deeppink;
+}
+
+#page-wrap{
+	background: deeppink;
+	margin: 0 auto;
+	width: 50em;
+	padding: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+
+
+#draggable{
+	background: url(../images/taylor.gif);
+	width: 320px;
+	height: 270px;
+}
+
+#angrybird{
+	background: url(../images/angryBird.png);
+	width: 400px;
+	height: 400px;
+}
+
+#thatpoppy{
+	background: url(../images/thatPoppy.gif);
+	width: 400px;
+	height: 400px;
+}
